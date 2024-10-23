@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:unless value="$(arg sim_mode)">
+        <ros2_control name="RealRobot" type="system">
+            <hardware>
+                <!-- Plugin for controlling motors via Raspberry Pi GPIO for L298N -->
+                <plugin>rpi_gpio_control/L298NPlugin</plugin>
+                <param name="left_rear_wheel_name">left_rear_wheel_joint</param>
+                <param name="right_rear_wheel_name">right_rear_wheel_joint</param>
+                <param name="left_front_wheel_name">left_front_wheel_joint</param>
+                <param name="right_front_wheel_name">right_front_wheel_joint</param>
+
+                <!-- GPIO Pin Configuration for L298N Motor Driver -->
+                <!-- Left Rear Motor -->
+                <param name="left_rear_pwm_pin">18</param>   <!-- PWM pin for left rear wheel -->
+                <param name="left_rear_dir_pin">23</param>   <!-- Direction pin for left rear wheel -->
+                
+                <!-- Right Rear Motor -->
+                <param name="right_rear_pwm_pin">19</param>   <!-- PWM pin for right rear wheel -->
+                <param name="right_rear_dir_pin">24</param>   <!-- Direction pin for right rear wheel -->
+                
+                <!-- Left Front Motor -->
+                <param name="left_front_pwm_pin">12</param>  <!-- PWM pin for left front wheel -->
+                <param name="left_front_dir_pin">25</param>  <!-- Direction pin for left front wheel -->
+                
+                <!-- Right Front Motor -->
+                <param name="right_front_pwm_pin">13</param>  <!-- PWM pin for right front wheel -->
+                <param name="right_front_dir_pin">26</param>  <!-- Direction pin for right front wheel -->
+
+                <param name="loop_rate">30</param>
+                <param name="timeout">1000</param>
+            </hardware>
+
+            <!-- Rear Left Wheel -->
+            <joint name="left_rear_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+            <!-- Rear Right Wheel -->
+            <joint name="right_rear_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+            <!-- Front Left Wheel -->
+            <joint name="left_front_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+            <!-- Front Right Wheel -->
+            <joint name="right_front_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+        </ros2_control>
+    </xacro:unless>
+
+    <xacro:if value="$(arg sim_mode)">
+        <ros2_control name="GazeboSystem" type="system">
+            <hardware>
+                <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+            </hardware>
+            <!-- Rear Left Wheel -->
+            <joint name="left_rear_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+            <!-- Rear Right Wheel -->
+            <joint name="right_rear_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+            <!-- Front Left Wheel -->
+            <joint name="left_front_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+            <!-- Front Right Wheel -->
+            <joint name="right_front_wheel_joint">
+                <command_interface name="velocity">
+                    <param name="min">-10</param>
+                    <param name="max">10</param>
+                </command_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="position"/>
+            </joint>
+        </ros2_control>
+    </xacro:if>
+
+    <gazebo>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <parameters>$(find my_bot_2)/config/my_controllers.yaml</parameters>
+            <parameters>$(find my_bot_2)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+</robot>
