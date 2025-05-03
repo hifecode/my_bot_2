@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hifecode/dev_ws3/install/serial_motor_demo_msgs/include/**",
+        "/home/hifecode/dev_ws3/install/diffdrive_arduino/include/**",
+        "/home/hifecode/ros2_ws2/install/ros2srrc_execution/include/**",
+        "/home/hifecode/ros2_ws2/install/ros2srrc_data/include/**",
+        "/home/hifecode/ros2_ws2/install/ros2_robotiqgripper/include/**",
+        "/home/hifecode/ros2_ws2/install/objectpose_msgs/include/**",
+        "/home/hifecode/ros2_ws2/install/linkpose_msgs/include/**",
+        "/home/hifecode/ros2_ws2/install/linkattacher_msgs/include/**",
+        "/home/hifecode/ros2_ws2/install/gazebo_ros2_control/include/**",
+        "/home/hifecode/ros2_ws2/install/abb_robot_msgs/include/**",
+        "/home/hifecode/ros2_ws2/install/abb_rapid_sm_addin_msgs/include/**",
+        "/home/hifecode/ros2_ws2/install/abb_rapid_msgs/include/**",
+        "/home/hifecode/ros2_ws2/install/abb_hardware_interface/include/**",
+        "/home/hifecode/ros2_ws2/install/abb_egm_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

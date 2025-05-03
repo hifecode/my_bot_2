@@ -1,0 +1,42 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/hifecode/dev_ws3/build/serial_motor_demo",
+        "/home/hifecode/dev_ws3/install/serial_motor_demo/lib/python3.10/site-packages",
+        "/home/hifecode/dev_ws3/install/serial_motor_demo_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/dev_ws3/build/joy_tester",
+        "/home/hifecode/dev_ws3/install/joy_tester/lib/python3.10/site-packages",
+        "/home/hifecode/ros2_ws2/install/ros2srrc_data/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/ros2_robotiqgripper/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/objectpose_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/linkpose_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/linkattacher_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_robot_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_rapid_sm_addin_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_rapid_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_egm_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws1/build/my_robot_controller",
+        "/home/hifecode/ros2_ws1/install/my_robot_controller/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/hifecode/dev_ws3/build/serial_motor_demo",
+        "/home/hifecode/dev_ws3/install/serial_motor_demo/lib/python3.10/site-packages",
+        "/home/hifecode/dev_ws3/install/serial_motor_demo_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/dev_ws3/build/joy_tester",
+        "/home/hifecode/dev_ws3/install/joy_tester/lib/python3.10/site-packages",
+        "/home/hifecode/ros2_ws2/install/ros2srrc_data/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/ros2_robotiqgripper/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/objectpose_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/linkpose_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/linkattacher_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_robot_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_rapid_sm_addin_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_rapid_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws2/install/abb_egm_msgs/local/lib/python3.10/dist-packages",
+        "/home/hifecode/ros2_ws1/build/my_robot_controller",
+        "/home/hifecode/ros2_ws1/install/my_robot_controller/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
