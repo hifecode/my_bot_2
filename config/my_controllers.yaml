@@ -24,7 +24,7 @@ diff_cont:
     wheel_separation: 0.35  # Distance between left and right wheel sets
     wheel_radius: 0.05      # Radius of the wheels
 
-    use_stamped_vel: false
+    # use_stamped_vel: false
 
     # Optional parameters
     # odom_frame_id: odom
